@@ -20,9 +20,21 @@
       "googleServicesFile": "./google-services.json",
       "package": "com.lukasbombachstroeer.firebasetaboolaarnexample"
     },
-    "plugins": ["expo-router", "@react-native-firebase/app", "@react-native-firebase/perf"],
+    "plugins": [
+      "expo-router",
+      "@react-native-firebase/app",
+      "@react-native-firebase/perf"
+    ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "e545b015-0d86-49b5-bbb8-62f787d20c3d"
+      }
     }
   }
 }
