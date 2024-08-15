@@ -15,10 +15,9 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff",
-        "googleServicesFile": "./google-services.json",
-        "package": "com.lukasbombachstroeer.firebasetaboolaarnexample"
+        "backgroundColor": "#ffffff"
       },
+      "googleServicesFile": "./google-services.json",
       "package": "com.lukasbombachstroeer.firebasetaboolaarnexample"
     },
     "plugins": ["expo-router", "@react-native-firebase/app", "@react-native-firebase/perf"],
