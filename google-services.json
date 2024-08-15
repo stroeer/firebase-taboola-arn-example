@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "691319532479",
+    "project_id": "fir-taboola-arn-example",
+    "storage_bucket": "fir-taboola-arn-example.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691319532479:android:bc198e5948a39761a7cf0a",
+        "android_client_info": {
+          "package_name": "com.lukasbombachstroeer.firebasetaboolaarnexample"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBz0XFH9MOY9BsqIlWBuRcjJqnUhl0d0B4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
