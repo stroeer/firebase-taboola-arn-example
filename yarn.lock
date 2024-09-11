@@ -6917,7 +6917,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-taboola@npm:1.0.0, expo-taboola@workspace:packages/expo-taboola":
+"expo-taboola@workspace:*, expo-taboola@workspace:packages/expo-taboola":
   version: 0.0.0-use.local
   resolution: "expo-taboola@workspace:packages/expo-taboola"
   dependencies:
@@ -7212,7 +7212,7 @@ __metadata:
     expo-splash-screen: "npm:0.27.5"
     expo-status-bar: "npm:1.12.1"
     expo-system-ui: "npm:3.0.7"
-    expo-taboola: "npm:1.0.0"
+    expo-taboola: "workspace:*"
     expo-web-browser: "npm:13.0.3"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
