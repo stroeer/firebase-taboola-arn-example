@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Text, StyleSheet, View } from "react-native";
 import perf from "@react-native-firebase/perf";
-import { initTaboola } from "expo-taboola";
+import { initTaboola, TaboolaWebView } from "expo-taboola";
 
 initTaboola();
 
@@ -27,6 +27,7 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
+      <TaboolaWebView name="taboolawebview" />
       <Text>Firebase Taboola ARN Example</Text>
     </View>
   );
