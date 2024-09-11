@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Text, StyleSheet, View } from "react-native";
 import perf from "@react-native-firebase/perf";
+import { hello } from "xyz-monorepo-test-package";
 
 function useCustomTraceToShowPerfSdkIsProperlyIntegrated() {
   useEffect(() => {
@@ -24,7 +25,7 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
-      <Text>Firebase Taboola ARN Example</Text>
+      <Text>Firebase Taboola ARN Example {hello()}</Text>
     </View>
   );
 }
