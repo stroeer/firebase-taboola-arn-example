@@ -4,10 +4,10 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "yarn workspace firebase-taboola-arn-example-app dev",
-    "android:prebuild": "yarn workspace firebase-taboola-arn-example-app android:prebuild",
-    "android:build": "yarn workspace firebase-taboola-arn-example-app android:build",
-    "android:install": "yarn workspace firebase-taboola-arn-example-app android:install"
+    "dev": "yarn workspace firebase-taboola-arn-example dev",
+    "android:prebuild": "yarn workspace firebase-taboola-arn-example android:prebuild",
+    "android:build": "yarn workspace firebase-taboola-arn-example android:build",
+    "android:install": "yarn workspace firebase-taboola-arn-example android:install"
   },
   "workspaces": [
     "example-app",
