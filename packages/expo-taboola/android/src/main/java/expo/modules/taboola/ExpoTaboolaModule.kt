@@ -1,10 +1,10 @@
 package expo.modules.taboola
 
 import android.util.Log
-import expo.modules.kotlin.modules.Module
-import expo.modules.kotlin.modules.ModuleDefinition
 import com.taboola.android.Taboola
 import com.taboola.android.TBLPublisherInfo
+import expo.modules.kotlin.modules.Module
+import expo.modules.kotlin.modules.ModuleDefinition
 
 const val TABOOLA_PUBLISHER_ID = "stroeer-tonlineandroidapp2022"
 
