@@ -25,12 +25,7 @@ function useCustomTraceToShowPerfSdkIsProperlyIntegrated() {
 export default function HomeScreen() {
   useCustomTraceToShowPerfSdkIsProperlyIntegrated();
 
-  return (
-    <View style={styles.container}>
-      <TaboolaWebView name="taboolawebview" />
-      <Text>Firebase Taboola ARN Example</Text>
-    </View>
-  );
+  return <TaboolaWebView name="taboolawebview" style={styles.container} />;
 }
 
 const styles = StyleSheet.create({
