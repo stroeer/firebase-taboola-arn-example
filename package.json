@@ -5,8 +5,9 @@
   "license": "UNLICENSED",
   "scripts": {
     "dev": "yarn workspace firebase-taboola-arn-example-app dev",
-    "prebuild:android": "yarn workspace firebase-taboola-arn-example-app prebuild:android",
-    "build:android": "yarn workspace firebase-taboola-arn-example-app build:android"
+    "android:prebuild": "yarn workspace firebase-taboola-arn-example-app android:prebuild",
+    "android:build": "yarn workspace firebase-taboola-arn-example-app android:build",
+    "android:install": "yarn workspace firebase-taboola-arn-example-app android:install"
   },
   "workspaces": [
     "example-app",
