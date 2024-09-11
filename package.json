@@ -7,10 +7,12 @@
     "dev": "yarn workspace firebase-taboola-arn-example dev",
     "android:prebuild": "yarn workspace firebase-taboola-arn-example android:prebuild",
     "android:build": "yarn workspace firebase-taboola-arn-example android:build",
-    "android:install": "yarn workspace firebase-taboola-arn-example android:install"
+    "android:install": "yarn workspace firebase-taboola-arn-example android:install",
+    "clean": "yarn workspaces foreach clean"
   },
   "workspaces": [
     "example-app",
     "packages/*"
-  ]
+  ],
+  "packageManager": "yarn@4.4.1"
 }

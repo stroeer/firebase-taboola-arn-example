@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Text, StyleSheet, View } from "react-native";
 import perf from "@react-native-firebase/perf";
-import { hello } from "xyz-monorepo-test-package";
+import { hello } from "expo-taboola";
 
 function useCustomTraceToShowPerfSdkIsProperlyIntegrated() {
   useEffect(() => {
