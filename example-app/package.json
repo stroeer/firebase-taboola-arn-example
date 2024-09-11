@@ -9,7 +9,7 @@
     "android:install": "adb install ./android/app/build/outputs/apk/debug/app-debug.apk",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "clean": "rimraf android .expo"
+    "clean": "rimraf --glob android .expo"
   },
   "dependencies": {
     "@expo/vector-icons": "14.0.2",
@@ -40,6 +40,7 @@
     "@babel/core": "7.25.2",
     "@types/react": "18.2.45",
     "@types/react-test-renderer": "18.0.7",
+    "rimraf": "6.0.1",
     "typescript": "5.3.3"
   },
   "private": true
