@@ -18,7 +18,6 @@ class ExpoTaboolaModule : Module() {
       Log.i("taboola", "toboola init successful")
     }
 
-    // todo: remove custom view code
     View(ExpoTaboolaView::class) {
       Prop("name") { view: ExpoTaboolaView, prop: String ->
         println(prop)
