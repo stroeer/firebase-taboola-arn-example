@@ -10,6 +10,8 @@ useCoreDependencies()
 useExpoPublishing()
 
 repositories {
+
+  // Note that we also added this maven repo to the expo app config at `example-app/app.json`
   maven {
     url "https://taboolapublic.jfrog.io/artifactory/mobile-release"
   }

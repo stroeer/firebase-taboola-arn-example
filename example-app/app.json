@@ -20,7 +20,19 @@
       "googleServicesFile": "./google-services.json",
       "package": "com.lukasbombachstroeer.firebasetaboolaarnexample"
     },
-    "plugins": ["expo-router", "@react-native-firebase/app", "@react-native-firebase/perf"],
+    "plugins": [
+      "expo-router",
+      "@react-native-firebase/app",
+      "@react-native-firebase/perf",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "extraMavenRepos": ["https://taboolapublic.jfrog.io/artifactory/mobile-release"]
+          }
+        }
+      ]
+    ],
     "experiments": {
       "typedRoutes": true
     },
