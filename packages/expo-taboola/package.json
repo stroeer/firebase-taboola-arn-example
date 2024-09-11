@@ -5,6 +5,7 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
+    "postinstall": "expo-module build",
     "build": "expo-module build",
     "clean": "expo-module clean && rimraf build",
     "lint": "expo-module lint",
