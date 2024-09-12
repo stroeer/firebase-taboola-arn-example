@@ -1,21 +1,22 @@
 import { useEffect } from "react";
 import { Text, StyleSheet, View } from "react-native";
 import perf from "@react-native-firebase/perf";
-import { initTaboola, TaboolaWebView } from "expo-taboola";
+import { initTaboola, giveTcfConsent, TaboolaWebView } from "expo-taboola";
 
+giveTcfConsent();
 initTaboola();
 
 function useCustomTraceToShowPerfSdkIsProperlyIntegrated() {
   useEffect(() => {
     perf()
       .startTrace("custom_trace_for_proof")
-      .then(trace => {
+      .then((trace) => {
         trace.putAttribute("perf_works", "true");
         return trace;
       })
-      .then(trace => trace.stop())
+      .then((trace) => trace.stop())
       .then(() => console.log("Custom trace created successfully"))
-      .catch(error => {
+      .catch((error) => {
         console.error("Failed to create custom trace");
         throw error;
       });
