@@ -7,7 +7,7 @@
   "scripts": {
     "postinstall": "expo-module build",
     "build": "expo-module build",
-    "clean": "expo-module clean && rimraf build",
+    "clean": "expo-module clean",
     "lint": "expo-module lint",
     "test": "expo-module test",
     "prepare": "expo-module prepare",
