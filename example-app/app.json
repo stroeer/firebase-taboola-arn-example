@@ -28,7 +28,10 @@
         "expo-build-properties",
         {
           "android": {
-            "extraMavenRepos": ["https://taboolapublic.jfrog.io/artifactory/mobile-release"]
+            // this is required by the expo-taboola plugin, which needs to have this repo available in the root project
+            "extraMavenRepos": ["https://taboolapublic.jfrog.io/artifactory/mobile-release"],
+            // if we don't set useLegacyPackaging to true, we run into errors on some development machines
+            "useLegacyPackaging": true
           }
         }
       ]
