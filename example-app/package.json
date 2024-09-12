@@ -3,12 +3,10 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
+    "prebuild:android": "expo prebuild --platform android --clean",
+    "build:android": "cd ./android && ./gradlew assembleDebug",
+    "install:android": "adb install ./android/app/build/outputs/apk/debug/app-debug.apk",
     "dev": "expo start --clear --dev-client",
-    "android:prebuild": "expo prebuild --platform android --clean",
-    "android:build": "cd ./android && ./gradlew assembleDebug",
-    "android:install": "adb install ./android/app/build/outputs/apk/debug/app-debug.apk",
-    "android": "expo run:android",
-    "ios": "expo run:ios",
     "clean": "rimraf --glob android .expo"
   },
   "dependencies": {
