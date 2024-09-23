@@ -12,6 +12,14 @@ When you open the app a second time, it will freeze upon starting and crash at s
 
 From this point on you can never open the app again.
 
+## Expected behavior
+
+- You can open the app more than once
+
+## Actual behavior
+
+- When you open the app for a second time you get a freeze and an eventual crash. From this point on you can never open the app again.
+
 ## Additional information
 
 By inpsecting the Android tombstone, you will find a potential deadlock that in the main thread caused by the Firebase Performance SDK.
@@ -21,14 +29,6 @@ We can reproduce this be using the Taboola SDK with a WebView that gets rendered
 The original issue suggests that this is caused by network requests happending before Firebase gets initialized.
 
 Taboola knows about this issue and suggests changing the Android init order as a workaround (see [linked support thread](https://web.archive.org/web/20240418075027/https://developers.taboola.com/taboolasdk/discuss/6513fe7b5b7e16002aaf8a44)), which points in the same direction.
-
-## Expected behavior
-
-- You can open the app more than once
-
-## Actual behavior
-
-- When you open the app for a second time you get a freeze and an eventual crash.
 
 ## Steps to reproduce
 
