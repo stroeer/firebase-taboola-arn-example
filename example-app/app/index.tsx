@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Text, StyleSheet, View } from "react-native";
 import perf from "@react-native-firebase/perf";
-import { initTaboola, giveTcfConsent } from "expo-taboola";
+import { initTaboola, giveTcfConsent, TaboolaWebView } from "expo-taboola";
 
 /**
  * Giving TCF consent is necessary for reproducing the issue
@@ -23,13 +23,13 @@ function useCustomTraceToShowPerfSdkIsProperlyIntegrated() {
   useEffect(() => {
     perf()
       .startTrace("custom_trace_for_proof")
-      .then((trace) => {
+      .then(trace => {
         trace.putAttribute("perf_works", "true");
         return trace;
       })
-      .then((trace) => trace.stop())
+      .then(trace => trace.stop())
       .then(() => console.log("Custom trace created successfully"))
-      .catch((error) => {
+      .catch(error => {
         console.error("Failed to create custom trace");
         throw error;
       });
@@ -39,11 +39,7 @@ function useCustomTraceToShowPerfSdkIsProperlyIntegrated() {
 export default function HomeScreen() {
   useCustomTraceToShowPerfSdkIsProperlyIntegrated();
 
-  return (
-    <View style={styles.container}>
-      <Text>Firebase Performance SDK ARN example</Text>
-    </View>
-  );
+  return <TaboolaWebView style={styles.container} />;
 }
 
 const styles = StyleSheet.create({
