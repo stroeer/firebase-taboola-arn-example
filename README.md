@@ -16,7 +16,44 @@ From this point on you can never open the app again.
 
 **Actual behavior** When you open the app for a second time you get a freeze and an eventual crash. This behaviour then persists.
 
-## Additional information
+## Steps to reproduce
+
+To reproduce the bug we use
+
+- Expo (react-native)
+- Firebase Performance SDK
+- Taboola Android SDK
+- A WebView
+- TCF Consent (probably to permit specific network requests)
+
+### Build the app
+
+```sh
+# Install dependencies
+yarn
+
+# Create Andoid project at `example-app/android`
+yarn prebuild:android
+
+# Build the android object as an debuggable apk
+# The apk will be written to
+# `example-app/android/app/build/outputs/apk/debug/app-debug.apk`
+yarn build:android
+```
+
+### Start the app
+
+1. Open an Android Emulator
+1. Install the apk. For convenience, you can use `yarn install:android`
+1. Start the react-native dev server (Metro) `yarn dev`
+1. Open the app on the emulator
+1. Close the app
+1. Open the app again
+1. 💥
+
+---
+
+# Additional information
 
 We can reproduce this be using the Taboola SDK with a WebView that gets rendered at startup (which cused this issue for us).
 
@@ -64,38 +101,3 @@ DALVIK THREADS (25):
   - waiting to lock <0x02d05d9f> (a java.lang.Class<com.google.firebase.perf.config.ConfigResolver>) held by thread 18
   at com.google.firebase.perf.FirebasePerfEarly.<init>(FirebasePerfEarly.java:41)
 ```
-
-## Steps to reproduce
-
-To reproduce the bug we use
-
-- Expo (react-native)
-- Firebase Performance SDK
-- Taboola Android SDK
-- A WebView
-- TCF Consent (probably to permit specific network requests)
-
-### Build the app
-
-```sh
-# Install dependencies
-yarn
-
-# Create Andoid project at `example-app/android`
-yarn prebuild:android
-
-# Build the android object as an debuggable apk
-# The apk will be written to
-# `example-app/android/app/build/outputs/apk/debug/app-debug.apk`
-yarn build:android
-```
-
-### Start the app
-
-1. Open an Android Emulator
-1. Install the apk. For convenience, you can use `yarn install:android`
-1. Start the react-native dev server (Metro) `yarn dev`
-1. Open the app on the emulator
-1. Close the app
-1. Open the app again
-1. 💥
