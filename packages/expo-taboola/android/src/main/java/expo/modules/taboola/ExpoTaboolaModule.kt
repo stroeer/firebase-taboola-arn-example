@@ -52,6 +52,8 @@ class ExpoTaboolaModule : Module() {
 
         apply()
       }
+
+      Log.i("tcf", "added tcf consent")
     }
 
     View(ExpoTaboolaView::class) {
