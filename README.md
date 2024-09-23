@@ -63,3 +63,4 @@ yarn build:android
 1. Open the app on the emulator
 1. Close the app
 1. Open the app again
+1. 💥
