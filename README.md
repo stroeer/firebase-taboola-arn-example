@@ -1,3 +1,17 @@
+#
+
+Reproducable example for [firebase-android-sdk#4831](https://github.com/firebase/firebase-android-sdk/issues/4831)
+
+> ANR on app launch at com.google.firebase.perf.config.ConfigResolver.getInstance
+
+To reproduce the bug we use
+
+- Expo (react-native)
+- Firebase Performance SDK
+- Taboola Android SDK
+- A WebView
+- TCF Consent
+
 ## Steps to reproduce
 
 ### Build the app
