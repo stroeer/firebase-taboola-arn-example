@@ -11,7 +11,6 @@ giveTcfConsent();
 
 /**
  * We also need to initialize Taboola SDK
- * todo: really? maybe not needed
  */
 initTaboola();
 
