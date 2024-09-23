@@ -30,6 +30,30 @@ The original issue suggests that this is caused by network requests happending b
 
 Taboola knows about this issue and suggests changing the Android init order as a workaround (see [linked support thread](https://web.archive.org/web/20240418075027/https://developers.taboola.com/taboolasdk/discuss/6513fe7b5b7e16002aaf8a44)), which points in the same direction.
 
+#### ANR File from a tombstone
+
+This file from a Tombstone after a freeze / crash is included in this repo: [`anr_2024-09-12-15-22-21-145`](./anr_2024-09-12-15-22-21-145)
+
+```
+----- pid 15409 at 2024-09-12 15:22:21.145074474+0200 -----
+Cmd line: com.lukasbombachstroeer.firebasetaboolaarnexample
+Build fingerprint: 'google/sdk_gphone64_arm64/emu64a:15/AP31.240617.003/12088229:user/release-keys'
+ABI: 'arm64'
+Build type: optimized
+Debug Store: 1,0,4107366::
+suspend all histogram:	Sum: 33us 99% C.I. 0.080us-8us Avg: 2.538us Max: 8us
+DALVIK THREADS (25):
+"main" prio=5 tid=1 Blocked
+  | group="main" sCount=1 ucsCount=0 flags=1 obj=0x71c6a9b8 self=0xb4000076de662380
+  | sysTid=15409 nice=-10 cgrp=top-app sched=0/0 handle=0x78f5a76d20
+  | state=S schedstat=( 252827325 15285081 198 ) utm=22 stm=2 core=1 HZ=100
+  | stack=0x7ff2d22000-0x7ff2d24000 stackSize=8188KB
+  | held mutexes=
+  at com.google.firebase.perf.config.ConfigResolver.getInstance(unavailable:2)
+  - waiting to lock <0x02d05d9f> (a java.lang.Class<com.google.firebase.perf.config.ConfigResolver>) held by thread 18
+  at com.google.firebase.perf.FirebasePerfEarly.<init>(FirebasePerfEarly.java:41)
+```
+
 ## Steps to reproduce
 
 To reproduce the bug we use
