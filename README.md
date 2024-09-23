@@ -1,6 +1,4 @@
-#
-
-Reproducible example for [firebase-android-sdk#4831](https://github.com/firebase/firebase-android-sdk/issues/4831)
+# Reproducible example for [firebase-android-sdk#4831](https://github.com/firebase/firebase-android-sdk/issues/4831)
 
 > ANR on app launch at com.google.firebase.perf.config.ConfigResolver.getInstance
 
