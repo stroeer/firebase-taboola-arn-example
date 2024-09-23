@@ -18,7 +18,7 @@ From this point on you can never open the app again.
 
 ## Actual behavior
 
-- When you open the app for a second time you get a freeze and an eventual crash. From this point on you can never open the app again.
+- When you open the app for a second time you get a freeze and an eventual crash. This behaviour then persists.
 
 ## Additional information
 
