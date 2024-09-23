@@ -39,7 +39,11 @@ function useCustomTraceToShowPerfSdkIsProperlyIntegrated() {
 export default function HomeScreen() {
   useCustomTraceToShowPerfSdkIsProperlyIntegrated();
 
-  return <View style={styles.container}>Firebase Performance SDK ARN example</View>;
+  return (
+    <View style={styles.container}>
+      <Text>Firebase Performance SDK ARN example</Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
